@@ -102,7 +102,7 @@ class sale_order_dates(osv.osv):
                  "date will be computed using the default method: based on "
                  "the Product Lead Times and the Company's Security Delay."),
         'effective_date': fields.function(_get_effective_date, type='date',
-            store=True, string='Effective Date',
+            string='Effective Date',
             help="Date on which the first Delivery Order was created."),
     }
 
