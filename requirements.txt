@@ -21,6 +21,7 @@ mock==1.0.1
 passlib==1.6.2
 psutil==2.1.1
 psycogreen==1.0
+# Replace psycopg2 2.7.1 by 2.8.2. 
 psycopg2==2.8.2 
 pyPdf==1.13
 pydot==1.0.2
