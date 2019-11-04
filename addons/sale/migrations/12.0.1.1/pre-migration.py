@@ -74,6 +74,12 @@ def fill_sale_order_line_sections(cr):
         ALTER TABLE sale_order_line ALTER COLUMN product_uom DROP not null
         """,
     )
+    # GRAP Custom
+    # return here, because we come from 8.0
+    # and there are no layout in V8
+    # So the following script will insert and then delete
+    # all the lines
+    return
     openupgrade.logged_query(
         cr, """
         INSERT INTO sale_order_line (order_id, layout_category_id,
