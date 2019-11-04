@@ -16,7 +16,7 @@ def fill_pos_order_line_prices(env):
 @openupgrade.migrate()
 def migrate(env, version):
     cr = env.cr
-    fill_pos_order_amounts(env)
-    fill_pos_order_line_prices(env)
+    # fill_pos_order_amounts(env)
+    # fill_pos_order_line_prices(env)
     openupgrade.load_data(
         cr, 'point_of_sale', 'migrations/12.0.1.0.1/noupdate_changes.xml')
