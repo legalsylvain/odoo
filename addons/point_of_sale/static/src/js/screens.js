@@ -327,7 +327,6 @@ var ScaleScreenWidget = ScreenWidget.extend({
         this.hotkey_handler = function(event){
             if(event.which === 13){
                 self.order_product();
-                self.gui.show_screen(self.next_screen);
             }else if(event.which === 27){
                 self.gui.show_screen(self.previous_screen);
             }
@@ -340,8 +339,6 @@ var ScaleScreenWidget = ScreenWidget.extend({
         });
 
         this.$('.next,.buy-product').click(function(){
-            self.gui.show_screen(self.next_screen);
-            // add product *after* switching screen to scroll properly
             self.order_product();
         });
 
@@ -366,6 +363,8 @@ var ScaleScreenWidget = ScreenWidget.extend({
         return current_pricelist;
     },
     order_product: function(){
+        this.gui.show_screen(this.next_screen);
+        // add product *after* switching screen to scroll properly
         this.pos.get_order().add_product(this.get_product(),{ quantity: this.weight });
     },
     get_product_name: function(){
@@ -557,8 +556,8 @@ var OrderWidget = PosBaseWidget.extend({
 
 
     set_value: function(val) {
-    	var order = this.pos.get_order();
-    	if (order.get_selected_orderline()) {
+        var order = this.pos.get_order();
+        if (order.get_selected_orderline()) {
             var mode = this.numpad_state.get('mode');
             if( mode === 'quantity'){
                 order.get_selected_orderline().set_quantity(val);
@@ -569,7 +568,7 @@ var OrderWidget = PosBaseWidget.extend({
                 selected_orderline.price_manually_set = true;
                 selected_orderline.set_unit_price(val);
             }
-    	}
+        }
     },
     change_selected_order: function() {
         if (this.pos.get_order()) {
@@ -1869,16 +1868,16 @@ var PaymentScreenWidget = ScreenWidget.extend({
         }
     },
     click_numpad: function(button) {
-	var paymentlines = this.pos.get_order().get_paymentlines();
-	var open_paymentline = false;
+    var paymentlines = this.pos.get_order().get_paymentlines();
+    var open_paymentline = false;
 
-	for (var i = 0; i < paymentlines.length; i++) {
-	    if (! paymentlines[i].paid) {
-		open_paymentline = true;
-	    }
-	}
+    for (var i = 0; i < paymentlines.length; i++) {
+        if (! paymentlines[i].paid) {
+        open_paymentline = true;
+        }
+    }
 
-	if (! open_paymentline) {
+    if (! open_paymentline) {
             this.pos.get_order().add_paymentline( this.pos.cashregisters[0]);
             this.render_paymentlines();
         }
