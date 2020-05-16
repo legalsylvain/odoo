@@ -726,3 +726,53 @@ class TestPointOfSaleFlow(TestPointOfSaleCommon):
 
         for iline in invoice.invoice_line_ids:
             self.assertFalse(iline.invoice_line_tax_ids)
+
+
+    def test_order_null_amount(self):
+        # I click on create a new session button
+        self.pos_config.open_session_cb()
+
+        current_session = self.pos_config.current_session_id
+        num_starting_orders = len(current_session.order_ids)
+
+        null_amount_order = {'data': {
+            'amount_paid': 0,
+            'amount_return': 0,
+            'amount_tax': 0,
+            'amount_total': 0,
+            'creation_date': fields.Datetime.to_string(fields.Datetime.now()),
+            'fiscal_position_id': False,
+            'pricelist_id': self.pos_config.available_pricelist_ids[0].id,
+            'lines': [[0, 0, {
+                'discount': 0,
+                'id': 3,
+                'pack_lot_ids': [],
+                'price_unit': 1.28,
+                'product_id': self.newspaper_rack.id,
+                'price_subtotal': 0,
+                'price_subtotal_incl': 0,
+                'qty': 1,
+                'tax_ids': [[6, False, self.newspaper_rack.taxes_id.ids]]
+            }]],
+            'name': 'Order 00044-003-0014',
+            'partner_id': False,
+            'pos_session_id': current_session.id,
+            'sequence_number': self.pos_config.journal_id.id,
+            'uid': '00044-003-0014',
+            'user_id': self.env.uid},
+            'id': '00044-003-0014',
+            'to_invoice': False}
+
+        # I create an order with null amount on an open session
+        order_id = self.PosOrder.create_from_ui([null_amount_order])
+
+        self.assertEqual(
+            num_starting_orders + 1,
+            len(current_session.order_ids),
+            "Submitted order with null amount not encoded")
+        order = self.PosOrder.browse(order_id)
+        self.assertEqual(
+            order.state,
+            'paid',
+            "Submitted order with null amount should be in the 'paid' state"
+        )
