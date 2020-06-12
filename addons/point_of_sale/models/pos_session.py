@@ -206,6 +206,7 @@ class PosSession(models.Model):
             # newly created bank statement
             ctx['journal_id'] = journal.id if pos_config.cash_control and journal.type == 'cash' else False
             st_values = {
+                'company_id': pos_config.company_id.id,
                 'journal_id': journal.id,
                 'user_id': self.env.user.id,
                 'name': pos_name,
