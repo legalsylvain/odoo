@@ -52,7 +52,7 @@ var PivotView = AbstractView.extend({
                     _.contains(params.additionalMeasures, name)) {
                         measures[name] = field;
                 }
-                if (_.contains(GROUPABLE_TYPES, field.type)) {
+                if (_.contains(GROUPABLE_TYPES, field.type) && ! _.contains(["write_date", "write_uid", "create_date", "create_uid"], name)) {
                     groupableFields[name] = field;
                 }
             }
