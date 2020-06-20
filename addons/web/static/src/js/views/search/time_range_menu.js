@@ -32,7 +32,7 @@ var TimeRangeMenu = Widget.extend({
         this._super(parent);
         this.dateFields = [];
         _.each(fields, function (field, name) {
-            if (field.sortable && _.contains(['date', 'datetime'], field.type)) {
+            if (field.sortable && _.contains(['date', 'datetime'], field.type) && ! _.contains(['create_date', 'write_date'], name)) {
                 self.dateFields.push(_.extend({}, field, {
                     name: name,
                 }));
