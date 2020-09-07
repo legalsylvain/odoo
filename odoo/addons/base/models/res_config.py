@@ -608,6 +608,7 @@ class ResConfigSettings(models.TransientModel, ResConfigModuleInstallationMixin)
         for method in dir(self):
             if method.startswith('set_') and method is not 'set_values':
                 _logger.warning(_('Methods that start with `set_` are deprecated. Override `set_values` instead (Method %s)') % method)
+        return True
 
     @api.multi
     def execute(self):
