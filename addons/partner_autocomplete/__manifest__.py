@@ -23,5 +23,5 @@
     'qweb': [
         'static/src/xml/partner_autocomplete.xml',
     ],
-    'auto_install': True,
+    'auto_install': False,
 }
