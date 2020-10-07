@@ -3,7 +3,7 @@
 # * stock
 # 
 # Translators:
-# David Machakhelidze <david.machakhelidze@gmail.com>, 2019
+# Davit Matchakhelidze <david.machakhelidze@gmail.com>, 2019
 # Gizo Kobakhidze <040168@gmail.com>, 2019
 # Giorgi Melitauri <gmelitauri@live.com>, 2019
 # Saba Khmaladze <skhmaladze@uglt.org>, 2019
@@ -696,6 +696,12 @@ msgstr "ხელმისაწვდომია"
 #: model_terms:ir.ui.view,arch_db:stock.stock_product_search_form_view
 msgid "Available Products"
 msgstr "ხელმისაწვდომი პროდუქტები"
+
+#. module: stock
+#: code:addons/stock/models/product.py:581
+#, python-format
+msgid "Available quantity should be set to zero before changing type"
+msgstr ""
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_move__backorder_id
@@ -3998,6 +4004,12 @@ msgstr ""
 #: code:addons/stock/models/stock_picking.py:690
 #, python-format
 msgid "Please add some items to move."
+msgstr ""
+
+#. module: stock
+#: code:addons/stock/models/stock_quant.py:92
+#, python-format
+msgid "Please check the following serial number (name, id): "
 msgstr ""
 
 #. module: stock

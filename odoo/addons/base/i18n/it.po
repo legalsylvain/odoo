@@ -25,13 +25,13 @@
 # efraimbiffi <eab@odoo.com>, 2018
 # mbo_odoo <mbo@odoo.com>, 2018
 # Simone Bernini <simone@aperturelabs.it>, 2018
-# Lorenzo Battistini <lb@takobi.online>, 2019
 # Martin Trigaux, 2019
 # Paolo Valier, 2019
 # Fabio Genovese <ing.fabiogenovese@gmail.com>, 2019
 # Léonie Bouchat <lbo@odoo.com>, 2019
 # Luigia Cimmino Caserta <lcc@odoo.com>, 2019
 # Stefano Consolaro <stefano.consolaro@mymage.it>, 2019
+# Lorenzo Battistini <lb@takobi.online>, 2020
 # Sergio Zanchetta <primes2h@gmail.com>, 2020
 # 
 msgid ""
@@ -1016,7 +1016,7 @@ msgid ""
 msgstr ""
 "\n"
 "        Questo modulo consente agli utenti dipendenti di comunicare con gli operatori chat in diretta\n"
-"        di un altro database su cui è installato un componente aggiuntivo.\n"
+"        di un altro database. In quest'ultimo è installato il componente aggiuntivo corrispondente.\n"
 "    "
 
 #. module: base
@@ -1916,7 +1916,7 @@ msgid ""
 msgstr ""
 "\n"
 "Funzionalità avanzate per il POS, come viste migliorate \n"
-"per la configuraione del box IoT.   \n"
+"per la configurazione del box IoT.   \n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_website_calendar
@@ -1995,8 +1995,8 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"Permette agli utenti di registrarsi e reimpostare la password\n"
-"===============================================\n"
+"Consente agli utenti di registrarsi e reimpostare la password\n"
+"==========================================================\n"
 "    "
 
 #. module: base
@@ -2007,7 +2007,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"Consenti ai visitatori del sito web di chattare con i collaboratori. Questo modulo include inoltre uno strumento di feedback per la chat in diretta e pagine web per visualizzare il tuo canale e le sue valutazioni sul sito web.\n"
+"Consenti ai visitatori del sito web di chattare con i collaboratori. Questo modulo include inoltre uno strumento di feedback per la chat dal vivo e pagine web per visualizzare il tuo canale e le sue valutazioni sul sito web.\n"
 "    "
 
 #. module: base
@@ -3036,7 +3036,7 @@ msgid ""
 "Display orders to invoice in website dashboard.\n"
 msgstr ""
 "\n"
-"Visualizza gli ordini da fatturare nella bacheca del Sito Web.\n"
+"Visualizza gli ordini da fatturare nella bacheca del sito web.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_it_edi
@@ -3243,7 +3243,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"Estensione per inviare documenti di follow-up per posta\n"
+"Estensione per inviare documenti di sollecito tramite posta\n"
 "    "
 
 #. module: base
@@ -3331,10 +3331,10 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"Piano dei Conti Generale.\n"
+"Piano dei conti generale.\n"
 "==========================\n"
 "\n"
-"Fornisce i Modelli per il piano dei Conti e le Tasse per l'Uruguay.\n"
+"Fornisce modelli per piano dei conti e imposte per l'Uruguay.\n"
 "\n"
 
 #. module: base
@@ -3883,7 +3883,7 @@ msgid ""
 "        "
 msgstr ""
 "\n"
-"Supporto con chat in diretta\n"
+"Supporto con chat dal vivo\n"
 "==========================\n"
 "\n"
 "Consente di lasciare widget di messaggistica istantanea su una pagina web che comunicherà\n"
@@ -4851,8 +4851,8 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"Geolocalizzazione dei Partner\n"
-"========================\n"
+"Geolocalizzazione dei partner\n"
+"================================\n"
 "    "
 
 #. module: base
@@ -5690,7 +5690,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"Questo è un modulo base. Contiene materiale relativo al sito web per il modello \"Contatto\" (res.partner).\n"
+"Questo è un modulo base. Contiene materiale relativo al sito web per il modello contatto (res.partner).\n"
 "    "
 
 #. module: base
@@ -5740,7 +5740,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"Modulo di base per la gestione delle unità di misura.\n"
+"Modulo base per la gestione delle unità di misura.\n"
 "========================================================================\n"
 "    "
 
@@ -6434,7 +6434,7 @@ msgid ""
 "This module allows a customer to give rating.\n"
 msgstr ""
 "\n"
-"Questo modulo consente ad un cliente di dare una valutazione.\n"
+"Questo modulo consente ai clienti di dare una valutazione.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_website_delivery_ups
@@ -7103,7 +7103,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"Ucraina - Piano dei Conti.\n"
+"Ucraina - Piano dei conti.\n"
 "============================\n"
 "    "
 
@@ -8655,12 +8655,12 @@ msgstr "Accesso"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_groups__model_access
 msgid "Access Controls"
-msgstr "Controlli accesso"
+msgstr "Controlli di accesso"
 
 #. module: base
 #: model:ir.model,name:base.model_res_groups
 msgid "Access Groups"
-msgstr "Gruppi d'accesso"
+msgstr "Gruppi di accesso"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_groups__menu_access
@@ -8873,7 +8873,7 @@ msgstr "Azione"
 #: model:ir.model.fields,field_description:base.field_ir_actions_server__help
 #: model:ir.model.fields,field_description:base.field_ir_cron__help
 msgid "Action Description"
-msgstr "Descrizione dell'Azione"
+msgstr "Descrizione azione"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_act_url__name
@@ -8887,13 +8887,13 @@ msgstr "Nome azione"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_act_url__target
 msgid "Action Target"
-msgstr "Obiettivo Azione"
+msgstr "Obiettivo azione"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_server__state
 #: model:ir.model.fields,field_description:base.field_ir_cron__state
 msgid "Action To Do"
-msgstr "Azione da svolgere"
+msgstr "Azione da eseguire"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_act_url__type
@@ -8912,7 +8912,7 @@ msgstr "Tipo azione"
 #: model:ir.model,name:base.model_ir_actions_act_url
 #: model:ir.model.fields,field_description:base.field_ir_actions_act_url__url
 msgid "Action URL"
-msgstr "URL dell'azione"
+msgstr "URL azione"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_act_window__usage
@@ -9038,7 +9038,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_im_livechat_mail_bot
 msgid "Add livechat support for OdooBot"
-msgstr "Aggiungi chat in diretta per OdooBot"
+msgstr "Aggiungi chat dal vivo per OdooBot"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_mass_mailing_sale
@@ -9914,7 +9914,7 @@ msgstr "Conti bancari"
 #: model:ir.model.fields,field_description:base.field_res_bank__bic
 #: model:ir.model.fields,field_description:base.field_res_partner_bank__bank_bic
 msgid "Bank Identifier Code"
-msgstr "Codice BIC SWIFT"
+msgstr "Codice identificativo banca (BIC/SWIFT)"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_bank_search
@@ -9992,7 +9992,7 @@ msgstr "Lettura di codice a barre su cellulare"
 #: code:addons/base/models/ir_qweb_fields.py:607
 #, python-format
 msgid "Barcode symbology"
-msgstr ""
+msgstr "Simbologia codice a barre"
 
 #. module: base
 #: code:addons/base/models/ir_qweb_fields.py:607
@@ -10316,7 +10316,7 @@ msgstr "Modulo ponte per i moduli di assistenza che usano il sito web. "
 #. module: base
 #: model:ir.module.module,summary:base.module_project_enterprise
 msgid "Bridge module for project and enterprise"
-msgstr ""
+msgstr "Modulo ponte per progetti e enterprise"
 
 #. module: base
 #: model:res.country,name:base.io
@@ -10409,7 +10409,7 @@ msgstr "Gamification CRM"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_crm_livechat
 msgid "CRM Livechat"
-msgstr "Diretta chat CRM"
+msgstr "Chat dal vivo CRM"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_crm_enterprise
@@ -10798,7 +10798,7 @@ msgstr "Cina - Dati città"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_cn_small_business
 msgid "China - Small Business CoA"
-msgstr ""
+msgstr "China - PdC per la piccola azienda"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_cn_standard
@@ -11523,7 +11523,7 @@ msgstr "Creazione"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_rule_search
 msgid "Create Access Right"
-msgstr "Crea Diritto di Accesso"
+msgstr "Diritto di accesso in creazione"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_form
@@ -11559,7 +11559,7 @@ msgstr "Crea prossima attività"
 #. module: base
 #: model:ir.module.module,summary:base.module_crm_project
 msgid "Create Tasks from Leads"
-msgstr "Creare attività dai lead"
+msgstr "Creazione lavori dai contatti"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_model_menu_create
@@ -11648,7 +11648,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_crm_livechat
 msgid "Create lead from livechat conversation"
-msgstr "Crea un lead da una conversazione chat in diretta"
+msgstr "Crea un lead da una conversazione chat dal vivo"
 
 #. module: base
 #: model:ir.module.module,description:base.module_crm_livechat
@@ -12326,7 +12326,7 @@ msgstr "Eliminazione"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_rule_search
 msgid "Delete Access Right"
-msgstr "Cancella Diritto di Accesso"
+msgstr "Diritto di accesso in eliminazione"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_partner_kanban_view
@@ -13640,7 +13640,7 @@ msgstr "Vista estesa"
 #. module: base
 #: model:ir.module.module,summary:base.module_snailmail_account_reports_followup
 msgid "Extension to send follow-up documents by post"
-msgstr ""
+msgstr "Estensione per inviare documenti di sollecito tramite posta"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_act_url__xml_id
@@ -14761,7 +14761,7 @@ msgstr "Gibilterra"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mail_github
 msgid "Github Integration with Discuss"
-msgstr "Integrazione GitHub con comunicazioni"
+msgstr "Integrazione GitHub con Comunicazioni"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_rule__global
@@ -14787,7 +14787,7 @@ msgid ""
 "Global rules are combined together with a logical AND operator, and with the"
 " result of the following steps"
 msgstr ""
-"Le regole globali sono combinate usando un operatore logico AND insieme al "
+"Le regole globali vengono unite con un operatore logico AND e con il "
 "risultato dei seguenti passi"
 
 #. module: base
@@ -15022,7 +15022,7 @@ msgstr "Gruppo di contatti"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_rule_form
 msgid "Group-specific rules are combined together with a logical OR operator"
-msgstr ""
+msgstr "Le regole specifiche del gruppo vengono unite con un operatore OR"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.action_res_groups
@@ -15762,7 +15762,7 @@ msgid ""
 "If user belongs to several groups, the results from step 2 are combined with"
 " logical OR operator"
 msgstr ""
-"Se l'utente appartiene a gruppi diversi, i risultati del passo 2 vengono "
+"Se l'utente appartiene a diversi gruppi, i risultati del passo 2 vengono "
 "combinati con l'operatore logico OR"
 
 #. module: base
@@ -16190,7 +16190,7 @@ msgstr "Modulo interaziendale per Ordini di Vendita/di Acquisto e Fatture"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_rule_form
 msgid "Interaction between rules"
-msgstr "Integrazione tra le regole"
+msgstr "Interazione tra regole"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_inter_company_rules
@@ -16216,7 +16216,7 @@ msgstr "Riferimento Interno"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_translation__src
 msgid "Internal Source"
-msgstr "Fonte Interna"
+msgstr "Riferimento interno"
 
 #. module: base
 #: model:res.groups,name:base.group_user
@@ -17019,7 +17019,7 @@ msgstr "Layout nei Report"
 #. module: base
 #: model:ir.module.category,name:base.module_category_lead_automation
 msgid "Lead Automation"
-msgstr "Automazione Lead"
+msgstr "Automazione contatto"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_crm_reveal
@@ -17034,7 +17034,7 @@ msgstr "Registrazione dei punteggi dei lead"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_crm_project
 msgid "Lead to Tasks"
-msgstr "Dai lead alle attività"
+msgstr "Dal contatto ai lavori"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.module_view_kanban
@@ -17241,7 +17241,7 @@ msgstr "Lituania - Contabilità"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_im_livechat
 msgid "Live Chat"
-msgstr "Chat in diretta"
+msgstr "Chat dal vivo"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_currency_rate_live
@@ -17251,7 +17251,7 @@ msgstr "Tasso di cambio corrente"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_im_support
 msgid "Livechat Support"
-msgstr "Supporto diretta chat"
+msgstr "Supporto chat dal vivo"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_language_install
@@ -18224,7 +18224,7 @@ msgstr "Dipendenza modulo"
 #. module: base
 #: model:ir.model,name:base.model_ir_module_module_exclusion
 msgid "Module exclusion"
-msgstr "Esclusione di modulo"
+msgstr "Esclusione modulo"
 
 #. module: base
 #: code:addons/convert.py:833
@@ -18250,7 +18250,7 @@ msgstr "Moduli"
 #: code:addons/base/models/ir_module.py:404
 #, python-format
 msgid "Modules \"%s\" and \"%s\" are incompatible."
-msgstr "I moduli «%s» e «%s» sono incompatibili."
+msgstr "I moduli \"%s\" e \"%s\" non sono compatibili."
 
 #. module: base
 #: model:res.country,name:base.md
@@ -20628,7 +20628,7 @@ msgstr "OdooBot"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_im_livechat_mail_bot
 msgid "OdooBot for livechat"
-msgstr "OdooBot per la chat in diretta"
+msgstr "OdooBot per la chat dal vivo"
 
 #. module: base
 #: model:res.partner.category,name:base.res_partner_category_12
@@ -20867,7 +20867,7 @@ msgstr "Model opzionale, solitamente usato per needactions."
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_mail_server__smtp_pass
 msgid "Optional password for SMTP authentication"
-msgstr "Password opzionale per autenticazione SMTP"
+msgstr "Password facoltativa per autenticazione SMTP"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_mail_server__smtp_user
@@ -21509,7 +21509,7 @@ msgstr "Sistema di pagamento: implementazione bonifico"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_reports_followup
 msgid "Payment Follow-up Management"
-msgstr "Gestione follow-up pagamenti"
+msgstr "Gestione solleciti di pagamento"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_payment
@@ -22057,7 +22057,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.category,name:base.res_partner_category_2
 msgid "Prospects"
-msgstr ""
+msgstr "Potenziali clienti"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_actions_server__link_field_id
@@ -22399,7 +22399,7 @@ msgstr "Lettura"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_rule_search
 msgid "Read Access Right"
-msgstr "Diritto accesso in lettura"
+msgstr "Diritto di accesso in lettura"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_fields__readonly
@@ -23263,9 +23263,10 @@ msgid ""
 "Selecting \"Blocking Message\" will throw an exception with the message and "
 "block the flow. The Message has to be written in the next field."
 msgstr ""
-"Scegliendo l'opzione \"Avvisi\" si notificherà all'utente con il messaggio, "
-"Scegliendo \"Messaggio bloccante\" lancerà una eccezione con il messaggio e "
-"bloccherà il flusso. Il messaggio deve essere scritto nel campo successivo."
+"Selezionando l'opzione \"Avviso\" l'utente viene notificato con un "
+"messaggio. Selezionando \"Messaggio bloccante\" viene inviata un'eccezione "
+"con il messaggio e viene bloccato il flusso. Scrivere il messaggio nel campo"
+" successivo."
 
 #. module: base
 #: code:addons/base/models/ir_qweb_fields.py:280
@@ -23696,7 +23697,7 @@ msgstr "Invio per posta"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_snailmail_account_reports_followup
 msgid "Snail Mail Follow-Up"
-msgstr "Controllo invio per posta"
+msgstr "Sollecito via posta ordinaria"
 
 #. module: base
 #: model:res.country,name:base.sb
@@ -25160,8 +25161,8 @@ msgid ""
 "                                                assignment."
 msgstr ""
 "Il campo <strong>Calcola</strong> è il codice Python che\n"
-"                                                calcola il valore del campo su un set di record. Questo valore\n"
-"                                                deve essere attribuito a ciascun record con una assegnazione simile a\n"
+"                                                calcola il valore del campo su un set di record. Questo valore deve\n"
+"                                                essere attribuito a ciascun record con una assegnazione simile a\n"
 "                                                quella di un dizionario."
 
 #. module: base
@@ -25704,6 +25705,14 @@ msgid "This module will trigger the uninstallation of below modules."
 msgstr "Questo modulo causerà la disinstallazione dei seguenti moduli:"
 
 #. module: base
+#: code:addons/base/ir/ir_sequence.py:56
+#, python-format
+msgid ""
+"This transaction wasn't executed because another transaction is already "
+"using the same no-gap sequence. Please try again later."
+msgstr ""
+
+#. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__thousands_sep
 msgid "Thousands Separator"
 msgstr "Separatore migliaia"
@@ -25721,12 +25730,12 @@ msgstr "Giovedì"
 #. module: base
 #: model:ir.module.module,summary:base.module_website_helpdesk_livechat
 msgid "Ticketing, Support, Livechat"
-msgstr "Creazione di biglietti, assistenza, chat in diretta"
+msgstr "Segnalazioni, assistenza, chat dal vivo"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_helpdesk_slides
 msgid "Ticketing, Support, Slides"
-msgstr "Creazione di Biglietti, Assistenza, Diapositive"
+msgstr "Segnalazioni, assistenza, presentazioni"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__time_format
@@ -27176,12 +27185,12 @@ msgstr "Assistenza del sito web"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_helpdesk_livechat
 msgid "Website IM Livechat Helpdesk"
-msgstr "Servizio assistenza con chat in diretta sul sito web"
+msgstr "Servizio assistenza con chat dal vivo sul sito web"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_livechat
 msgid "Website Live Chat"
-msgstr "Chat in diretta dal sito web"
+msgstr "Chat dal vivo dal sito web"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_mail
@@ -27381,7 +27390,7 @@ msgstr "Scrittura"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_rule_search
 msgid "Write Access Right"
-msgstr "Diritti di accesso in scrittura"
+msgstr "Diritto di accesso in scrittura"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_actions_server__code
@@ -27587,8 +27596,8 @@ msgid ""
 "should do the trick."
 msgstr ""
 "Il server Odoo non supporta SMTP-over-SSL, in alternativa può essere "
-"utilizzato STARTTLS. Se è necessario SSL, è sufficiente un aggiornamento a "
-"Python 2.6 lato server."
+"utilizzato STARTTLS. Se è necessario SSL, è sufficiente un aggiornamento del"
+" server a Python 2.6."
 
 #. module: base
 #: code:addons/base/models/ir_mail_server.py:500

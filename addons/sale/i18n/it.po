@@ -15,7 +15,6 @@
 # Cesare Cugnasco <cesare.cugnasco@gmail.com>, 2018
 # Luigi Di Naro <gigidn@gmail.com>, 2018
 # David Minneci <david@numeko.it>, 2018
-# Martin Trigaux, 2018
 # Manuela Feliciani <mfeliciani@alice.it>, 2018
 # Lorenzo Battistini <lb@takobi.online>, 2019
 # Léonie Bouchat <lbo@odoo.com>, 2019
@@ -23,6 +22,7 @@
 # Mario Riva <mario.riva@gmail.com>, 2019
 # SebastianoPistore <SebastianoPistore.info@protonmail.ch>, 2019
 # Luigia Cimmino Caserta <lcc@odoo.com>, 2019
+# Martin Trigaux, 2020
 # Sergio Zanchetta <primes2h@gmail.com>, 2020
 # 
 msgid ""
@@ -2140,7 +2140,7 @@ msgstr "Tipologia prossima attività"
 #. module: sale
 #: selection:product.template,expense_policy:0
 msgid "No"
-msgstr "N°"
+msgstr "No"
 
 #. module: sale
 #: selection:product.template,sale_line_warn:0
@@ -3302,9 +3302,10 @@ msgid ""
 "Selecting \"Blocking Message\" will throw an exception with the message and "
 "block the flow. The Message has to be written in the next field."
 msgstr ""
-"Scegliendo l'opzione \"Avvisi\" si notificherà all'utente con il messaggio, "
-"Scegliendo \"Messaggio bloccante\" lancerà una eccezione con il messaggio e "
-"bloccherà il flusso. Il messaggio deve essere scritto nel campo successivo."
+"Selezionando l'opzione \"Avviso\" l'utente viene notificato con un "
+"messaggio. Selezionando \"Messaggio bloccante\" viene inviata un'eccezione "
+"con il messaggio e viene bloccato il flusso. Scrivere il messaggio nel campo"
+" successivo."
 
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.res_config_settings_view_form
@@ -3638,8 +3639,8 @@ msgid ""
 "Terms and conditions... (note: you can setup default ones in the "
 "Configuration menu)"
 msgstr ""
-"Termini e condizioni... (nota: è possibile definire quelli predefiniti nel "
-"menu di configurazione)"
+"Termini e condizioni... (nota: è possibile impostare quelli predefiniti nel "
+"menù di configurazione)"
 
 #. module: sale
 #: code:addons/sale/models/analytic.py:116
@@ -3767,12 +3768,12 @@ msgstr "Il valore dell'anticipo deve essere positivo"
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.portal_my_orders
 msgid "There are currently no orders for your account."
-msgstr "Nel conto non sono attualmente presenti ordini."
+msgstr "Al momento non sono presenti ordini nell'account."
 
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.portal_my_quotations
 msgid "There are currently no quotations for your account."
-msgstr "Nel conto non sono attualmente presenti preventivi."
+msgstr "Al momento non sono presenti preventivi nell'account."
 
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.res_config_settings_view_form
