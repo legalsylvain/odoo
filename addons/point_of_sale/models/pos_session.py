@@ -26,8 +26,11 @@ class PosSession(models.Model):
             if not journal_id:
                 raise UserError(_("You have to set a Sale Journal for the POS:%s") % (session.config_id.name,))
 
-            move = self.env['pos.order'].with_context(force_company=company_id)._create_account_move(session.start_at, session.name, int(journal_id), company_id)
-            orders.with_context(force_company=company_id)._create_account_move_line(session, move)
+            # <GRAP::change>
+            # Use current company to create acount moves and account move lines
+            move = self.env['pos.order'].with_context(force_company=session.config_id.company_id.id)._create_account_move(session.start_at, session.name, int(journal_id), company_id)
+            orders.with_context(force_company=session.config_id.company_id.id)._create_account_move_line(session, move)
+            # </GRAP>
             for order in session.order_ids.filtered(lambda o: o.state not in ['done', 'invoiced']):
                 if order.state not in ('paid'):
                     raise UserError(
