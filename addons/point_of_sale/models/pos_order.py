@@ -306,8 +306,11 @@ class PosOrder(models.Model):
             partner_id = ResPartner._find_accounting_partner(order.partner_id).id or False
             if move is None:
                 # Create an entry for the sale
+                # <GRAP::CHANGE>
+                # Do not use journal company
                 journal_id = self.env['ir.config_parameter'].sudo().get_param(
-                    'pos.closing.journal_id_%s' % current_company.id, default=order.sale_journal.id)
+                    'pos.closing.journal_id_%s' % self.env.user.company_id.id, default=order.sale_journal.id)
+                # </GRAP>
                 move = self._create_account_move(
                     order.session_id.start_at, order.name, int(journal_id), order.company_id.id)
 
@@ -400,7 +403,9 @@ class PosOrder(models.Model):
                 move_lines.append({'data_type': 'product', 'values': data})
 
                 # Create the tax lines
-                taxes = line.tax_ids_after_fiscal_position.filtered(lambda t: t.company_id.id == current_company.id)
+                # <GRAP::change> Do not filter
+                taxes = line.tax_ids_after_fiscal_position
+                # </GRAP>
                 if not taxes:
                     continue
                 price = line.price_unit * (1 - (line.discount or 0.0) / 100.0)
@@ -953,10 +958,11 @@ class PosOrder(models.Model):
         journal_id = data.get('journal', False)
         statement_id = data.get('statement_id', False)
         assert journal_id or statement_id, "No statement_id or journal_id passed to the method!"
-
-        journal = self.env['account.journal'].browse(journal_id)
-        # use the company of the journal and not of the current user
-        company_cxt = dict(self.env.context, force_company=journal.company_id.id)
+        # <GRAP> Do not use journal company to find the receivable account
+        # journal = self.env['account.journal'].browse(journal_id)
+        # # use the company of the journal and not of the current user
+        company_cxt = dict(self.env.context, force_company=self.company_id.id)
+        # </GRAP>
         account_def = self.env['ir.property'].with_context(company_cxt).get('property_account_receivable_id', 'res.partner')
         args['account_id'] = (self.partner_id.property_account_receivable_id.id) or (account_def and account_def.id) or False
 
