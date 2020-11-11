@@ -515,7 +515,13 @@ exports.PosModel = Backbone.Model.extend({
                 logo_loaded.reject();
             };
             self.company_logo.crossOrigin = "anonymous";
-            self.company_logo.src = '/web/binary/company_logo' +'?dbname=' + session.db + '&_'+Math.random();
+            // <GRAP::CHANGE>
+            // We don't want to display the same logo for all the companies,
+            // but the logo of the current company.
+            // self.company_logo.src = '/web/binary/company_logo' +'?dbname=' + session.db + '&_'+Math.random();
+            self.company_logo.src = '/web/image?model=res.company&field=logo&id=' + self.company.id;
+            // </GRAP>
+
 
             return logo_loaded;
         },
