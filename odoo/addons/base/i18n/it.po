@@ -7428,7 +7428,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_lang_form
 msgid "%A - Full weekday name."
-msgstr "%A - Nome completo del giorno della settimana."
+msgstr "%A - Nome completo giorno della settimana."
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_lang_form
@@ -7463,7 +7463,7 @@ msgstr "%Y - Anno con secolo.\""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_lang_form
 msgid "%a - Abbreviated weekday name."
-msgstr "%a - Nome abbreviato del giorno della settimana."
+msgstr "%a - Nome abbreviato giorno della settimana."
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_lang_form
@@ -9290,8 +9290,8 @@ msgid ""
 "All the emails and documents sent to this contact will be translated in this"
 " language."
 msgstr ""
-"Tutte le e-mail e i documenti inviati a questo contatto vengono tradotti in "
-"questa lingua."
+"Tutte le e-mail e i documenti inviati a questo contatto verranno tradotti in"
+" questa lingua."
 
 #. module: base
 #: model:ir.module.module,summary:base.module_hr_holidays
@@ -9335,6 +9335,7 @@ msgstr "Aziende ammesse"
 #: model:ir.module.module,summary:base.module_stock_barcode_quality_control
 msgid "Allows the usage of quality checks within the barcode views"
 msgstr ""
+"Consente l'utilizzo di controlli qualità dentro le viste dei codici a barre"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_coupon_delivery
@@ -10342,7 +10343,7 @@ msgstr "Gestione del budget"
 #. module: base
 #: model:ir.module.module,summary:base.module_marketing_automation
 msgid "Build automated mailing campaigns"
-msgstr ""
+msgstr "Crea campagne di invio e-mail automatizzate"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_form_editor
@@ -10534,7 +10535,7 @@ msgstr "Annulla avanzamento"
 #: code:addons/models.py:2118
 #, python-format
 msgid "Cannot aggregate field %r."
-msgstr ""
+msgstr "Impossibile aggregare il campo %r."
 
 #. module: base
 #: code:addons/base/models/ir_translation.py:256
@@ -19657,7 +19658,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_web_mobile
 msgid "Odoo Mobile Core module"
-msgstr ""
+msgstr "Modulo base Odoo per dispositivi mobili"
 
 #. module: base
 #: model:ir.module.module,description:base.module_note
@@ -21396,7 +21397,7 @@ msgstr "Modulo partner per sito web"
 #. module: base
 #: model:ir.model.fields,help:base.field_res_users__partner_id
 msgid "Partner-related data of the user"
-msgstr "Dati partner dell'utente"
+msgstr "Dati utente collegati al partner"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner_category__partner_ids
@@ -25703,14 +25704,6 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_upgrade
 msgid "This module will trigger the uninstallation of below modules."
 msgstr "Questo modulo causerà la disinstallazione dei seguenti moduli:"
-
-#. module: base
-#: code:addons/base/ir/ir_sequence.py:56
-#, python-format
-msgid ""
-"This transaction wasn't executed because another transaction is already "
-"using the same no-gap sequence. Please try again later."
-msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__thousands_sep

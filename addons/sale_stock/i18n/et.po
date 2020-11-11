@@ -12,6 +12,7 @@
 # Maidu Targama <m.targama@gmail.com>, 2019
 # Arma Gedonsky <armagedonsky@hot.ee>, 2019
 # Algo Kärp <algokarp@gmail.com>, 2020
+# Piia Paurson <piia@avalah.ee>, 2020
 # Eneli Õigus <enelioigus@gmail.com>, 2020
 # 
 msgid ""
@@ -374,7 +375,7 @@ msgstr ""
 #. module: sale_stock
 #: model:ir.model.fields,field_description:sale_stock.field_sale_order__picking_ids
 msgid "Pickings"
-msgstr "Nopped"
+msgstr "Laolehed"
 
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_procurement_group
@@ -522,7 +523,7 @@ msgstr "Laoreegel"
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_stock_rules_report
 msgid "Stock Rules report"
-msgstr ""
+msgstr "Laoreeglite aruanne"
 
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_report_stock_report_stock_rule

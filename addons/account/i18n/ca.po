@@ -16,6 +16,8 @@
 # Carles Antoli <carlesantoli@hotmail.com>, 2020
 # César López Ramírez <cesar.lopez@coopdevs.org>, 2020
 # Josep Sànchez <papapep@gmx.com>, 2020
+# jabelchi <jabelchi@gmail.com>, 2020
+# Susanna Pujol, 2020
 # Eugeni Chafert <eugeni@chafer.cat>, 2020
 # 
 msgid ""
@@ -402,8 +404,8 @@ msgid ""
 "<span class=\"o_form_label\">All selected journal entries will be validated "
 "and posted. You won't be able to modify them afterwards.</span>"
 msgstr ""
-"<span class=\"o_form_label\">Es validaran i publicaran totes les entrades de"
-" diari seleccionades. No s'admetran modificacions posteriorment.</span>"
+"<span class=\"o_form_label\">Es validaran i publicaran tots els assentaments"
+" seleccionats. No s'admetran modificacions posteriorment.</span>"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.res_config_settings_view_form
@@ -547,7 +549,7 @@ msgstr "Número de factura"
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.account_journal_dashboard_kanban_view
 msgid "<span>Journal Entries</span>"
-msgstr "<span>Entrades Diari</span>"
+msgstr "<span>Assentaments</span>"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.account_journal_dashboard_kanban_view
@@ -2914,7 +2916,7 @@ msgstr "Trieu la plantilla de pla comptable"
 #: model_terms:ir.ui.view,arch_db:account.account_invoice_onboarding_sale_tax_form
 #: model_terms:ir.ui.view,arch_db:account.onboarding_sale_tax_step
 msgid "Choose a default sales tax for your products."
-msgstr ""
+msgstr "Escolliu un impost de venda per defecte pels productes."
 
 #. module: account
 #. openerp-web
@@ -2933,7 +2935,7 @@ msgstr ""
 #. module: account
 #: model_terms:ir.actions.act_window,help:account.actions_account_fiscal_year
 msgid "Click here to create a new fiscal year."
-msgstr ""
+msgstr "Clic aquí per crear un nou any fiscal."
 
 #. module: account
 #. openerp-web
@@ -3237,7 +3239,7 @@ msgstr ""
 #: code:addons/account/static/src/xml/account_reconciliation.xml:54
 #, python-format
 msgid "Congrats, you're all done!"
-msgstr ""
+msgstr "No teniu cap tasca pendent"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.account_invoice_onboarding_panel
@@ -3348,7 +3350,7 @@ msgstr ""
 #. module: account
 #: model_terms:ir.actions.act_window,help:account.action_account_bank_journal_form
 msgid "Create a bank account"
-msgstr ""
+msgstr "Crear un compte bancari"
 
 #. module: account
 #: model_terms:ir.actions.act_window,help:account.action_invoice_out_refund
@@ -3373,7 +3375,7 @@ msgstr ""
 #. module: account
 #: model_terms:ir.actions.act_window,help:account.action_account_group_tree
 msgid "Create a new account group"
-msgstr ""
+msgstr "Crear una nova compta de grup."
 
 #. module: account
 #: model_terms:ir.actions.act_window,help:account.action_view_bank_statement_tree
@@ -3797,7 +3799,7 @@ msgstr "Personalitzar"
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.onboarding_invoice_layout_step
 msgid "Customize the look of your invoices."
-msgstr ""
+msgstr "Personalitzeu l'aspecte de les factures"
 
 #. module: account
 #: model:account.incoterms,name:account.incoterm_DAF
@@ -5086,7 +5088,7 @@ msgstr "Té un error"
 #: model:ir.model.fields,field_description:account.field_account_payment__hide_payment_method
 #: model:ir.model.fields,field_description:account.field_account_register_payments__hide_payment_method
 msgid "Hide Payment Method"
-msgstr ""
+msgstr "Amagar mètode de pagament"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_tax__hide_tax_exigibility
@@ -8012,6 +8014,12 @@ msgid ""
 msgstr ""
 
 #. module: account
+#: code:addons/account/models/account_cash_rounding.py:33
+#, python-format
+msgid "Please set a strictly positive rounding value."
+msgstr ""
+
+#. module: account
 #: model_terms:ir.ui.view,arch_db:account.report_invoice_document
 msgid "Please use the following communication for your payment :"
 msgstr "Si us plau utilitzeu la següent comunicació per al vostre pagament:"
@@ -8744,7 +8752,7 @@ msgstr "Precisió d'arrodoniment"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_cash_rounding__strategy
 msgid "Rounding Strategy"
-msgstr ""
+msgstr "Estratègia d'arrodoniment"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.rounding_tree_view
@@ -9088,7 +9096,7 @@ msgstr ""
 #. module: account
 #: model:ir.actions.act_window,name:account.action_open_account_onboarding_sample_invoice
 msgid "Send a sample invoice"
-msgstr ""
+msgstr "Enviar factura de mostra"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.onboarding_sample_invoice_step
@@ -9098,7 +9106,7 @@ msgstr ""
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.onboarding_sample_invoice_step
 msgid "Send sample"
-msgstr ""
+msgstr "Enviar mostra"
 
 #. module: account
 #: selection:account.payment,state:0
@@ -9212,6 +9220,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:account.dashboard_onboarding_company_step
 msgid "Setup your company's data for reports headers."
 msgstr ""
+"Establiu les dades de la vostra empresa per a les capçaleres dels informes."
 
 #. module: account
 #: model:ir.actions.server,name:account.model_account_invoice_action_share
@@ -9324,6 +9333,8 @@ msgid ""
 "Specify which way will be used to round the invoice amount to the rounding "
 "precision"
 msgstr ""
+"Especifica de quina manera s'arrodonirà la factura a la precisió "
+"d'arrodoniment"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_send__starred
@@ -10752,7 +10763,8 @@ msgid ""
 "This field contains the information related to the numbering of the journal "
 "entries of this journal."
 msgstr ""
-"Aquest camp conte la informació relacionada amb la numeració d'aquest diari."
+"Aquest camp conte la informació relacionada amb la numeració dels "
+"assentaments d'aquest diari."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_reconcile_model__journal_id
@@ -12115,12 +12127,6 @@ msgstr ""
 "Haurà de configurar 'Pèrdua per diferència de canvi' en la configuració de "
 "comptabilitat per gestionar automàticament els assentaments al llibre "
 "comptable associades a les diferències relacionades amb el canvi de moneda."
-
-#. module: account
-#: code:addons/account/models/account_cash_rounding.py:33
-#, python-format
-msgid "Please set a positive rounding value."
-msgstr ""
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_invoice_refund
