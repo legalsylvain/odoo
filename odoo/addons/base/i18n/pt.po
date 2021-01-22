@@ -19,9 +19,9 @@
 # Pedro Castro Silva <pedrocs@exo.pt>, 2019
 # Pedro Filipe <pedro2.10@hotmail.com>, 2019
 # Martin Trigaux, 2019
-# Nuno Silva <nuno.silva@arxi.pt>, 2020
 # Marcelo Pereira <marcelo.pereira@arxi.pt>, 2020
 # Manuela Silva <manuelarodsilva@gmail.com>, 2020
+# Nuno Silva <nuno.silva@arxi.pt>, 2020
 # Reinaldo Ramos <reinaldo.ramos@arxi.pt>, 2020
 # 
 msgid ""
@@ -6652,6 +6652,8 @@ msgid ""
 "Account holder name, in case it is different than the name of the Account "
 "Holder"
 msgstr ""
+"Nome do titular da conta, no caso de ser diferente do nome do contacto "
+"Titular da Conta"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_accounting
@@ -24275,13 +24277,13 @@ msgstr ""
 #: code:addons/base/models/res_users.py:435
 #, python-format
 msgid "You cannot activate the superuser."
-msgstr ""
+msgstr "Não é possível ativar o superuser."
 
 #. module: base
 #: code:addons/base/models/res_partner.py:509
 #, python-format
 msgid "You cannot archive a contact linked to an internal user."
-msgstr ""
+msgstr "Não é possível arquivar um contacto ligado a um utilizador interno."
 
 #. module: base
 #: code:addons/base/models/res_partner.py:330
