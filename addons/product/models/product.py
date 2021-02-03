@@ -468,7 +468,7 @@ class ProductProduct(models.Model):
 
             name = variant and "%s (%s)" % (product.name, variant) or product.name
             sellers = []
-            if partner_ids:
+            if partner_ids and self.env.context.get("supplier_info_name", False):
                 product_supplier_info = supplier_info_by_template.get(product.product_tmpl_id, [])
                 sellers = [x for x in product_supplier_info if x.product_id and x.product_id == product]
                 if not sellers:
