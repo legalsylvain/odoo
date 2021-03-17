@@ -220,7 +220,7 @@ class ProductProduct(models.Model):
             to_uom = self.env['uom.uom'].browse([self._context['uom']])
 
         for product in self:
-            if to_uom:
+            if to_uom and product.uom_id:
                 list_price = product.uom_id._compute_price(product.list_price, to_uom)
             else:
                 list_price = product.list_price
