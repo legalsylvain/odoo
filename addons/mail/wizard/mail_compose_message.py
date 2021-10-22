@@ -285,7 +285,15 @@ class MailComposer(models.TransientModel):
         reply_to_value = dict.fromkeys(res_ids, None)
         if mass_mail_mode and not self.no_auto_thread:
             records = self.env[self.model].browse(res_ids)
-            reply_to_value = self.env['mail.thread']._notify_get_reply_to_on_records(default=self.email_from, records=records)
+            self.env['mail.template']._render_template(self.email_from, self.model, res_ids)
+            # <GRAP> FIX : in mail_mail_mode, self.email can be not evaluated.
+            # for exemple : self.email_from = ${object.user_id.email_formatted}
+            # this part avoid to have a bad value in reply_to_value.
+            if res_ids:
+                _fix_email_from = self.env['mail.template']._render_template(self.email_from, self.model, res_ids[0])
+            else:
+                _fix_email_from = self.email_from
+            reply_to_value = self.env['mail.thread']._notify_get_reply_to_on_records(default=_fix_email_from, records=records)
 
         blacklisted_rec_ids = []
         if mass_mail_mode and hasattr(self.env[self.model], "_primary_email"):
