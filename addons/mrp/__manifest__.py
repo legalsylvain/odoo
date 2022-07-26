@@ -45,6 +45,7 @@
     ],
     'test': [],
     'application': True,
+    'pre_init_hook': '_pre_populate_mrp_fields',
     'post_init_hook': '_create_warehouse_data',
     'license': 'LGPL-3',
 }
