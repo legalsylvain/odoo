@@ -10,6 +10,7 @@ from odoo.tools import check_barcode_encoding, config, is_html_empty, parse_vers
 from odoo.http import request
 from odoo.osv.expression import NEGATIVE_TERM_OPERATORS, FALSE_DOMAIN
 
+import time
 import io
 import logging
 import os
@@ -412,6 +413,7 @@ class IrActionsReport(models.Model):
         :return: Content of the pdf as bytes
         :rtype: bytes
         '''
+        _logger.info("================= BEGIN OF _run_wkhtmltopdf()")
         paperformat_id = self._get_report(report_ref).get_paperformat() if report_ref else self.get_paperformat()
 
         # Build the base command args for wkhtmltopdf bin
@@ -449,6 +451,11 @@ class IrActionsReport(models.Model):
         os.close(pdf_report_fd)
         temporary_files.append(pdf_report_path)
 
+        # EXPORT
+
+        time_1 = time.time()
+        _logger.info("================= BEGIN OF WKHTMLTOPDF")
+
         try:
             wkhtmltopdf = [_get_wkhtmltopdf_bin()] + command_args + files_command_args + paths + [pdf_report_path]
             process = subprocess.Popen(wkhtmltopdf, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -469,6 +476,15 @@ class IrActionsReport(models.Model):
         except:
             raise
 
+        time_2 = time.time()
+        _logger.info("WKHTMLTOPDF: %s seconds" % (time_2 - time_1))
+        _logger.info("================= SWITCH WKHTMLTOPDF / WEASYPRINT")
+
+        self._run_weasyprint()
+        time_2 = time.time()
+        _logger.info("WEASYPRINT: %s seconds" % (time_3 - time_2))
+        _logger.info("================= SWITCH WKHTMLTOPDF / WEASYPRINT")
+
         with open(pdf_report_path, 'rb') as pdf_document:
             pdf_content = pdf_document.read()
 
@@ -479,7 +495,12 @@ class IrActionsReport(models.Model):
             except (OSError, IOError):
                 _logger.error('Error when trying to remove file %s' % temporary_file)
 
+        _logger.info("================= END OF _run_wkhtmltopdf()")
         return pdf_content
+
+    @api.model
+    def _run_weasyprint(self):
+        pass
 
     @api.model
     def _get_report_from_name(self, report_name):
