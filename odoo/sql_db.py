@@ -228,6 +228,14 @@ class Cursor(object):
                 _logger.error("bad query: %s\nERROR: %s", ustr(self._obj.query or query), e)
             raise
 
+        # GRAP
+        threshold = 0.05
+        after = time.time()
+        if (after - now) > threshold:
+            encoding = psycopg2.extensions.encodings[self.connection.encoding]
+            _logger.warn(f"Slow Query {after-now} : \n\n{self._obj.mogrify(query, params).decode(encoding, 'replace')}")
+        # GRAP
+
         # simple query count is always computed
         self.sql_log_count += 1
         delay = (time.time() - now)
